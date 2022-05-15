@@ -1,0 +1,38 @@
+# Insert a number , delete a number in specific index in an Array
+
+
+package Arrays;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class InsertAndDelete {
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        List<String> arraylist=new ArrayList<String>();
+        arraylist.add("divya");
+        arraylist.add(1,"Divya");
+        arraylist.add(2,"sandeep");
+        arraylist.add(3,"sandhiya");
+        arraylist.add(4,"varshitha");
+        arraylist.add(5,"Naveen");
+        arraylist.add(6,"sathya");
+        System.out.println(arraylist);
+        List arr=new ArrayList();
+
+        for(int i=0;i<=5;i++){
+            System.out.println("enter the arrays add value:");
+            int a=s.nextInt();
+            arr.add(i,a);
+        }
+
+       System.out.println(arr);
+        arr.addAll(2,arraylist);
+        System.out.println(arr);
+        System.out.println(arraylist);
+        arr.remove(2);
+        System.out.println(arr);
+
+    }
+}
